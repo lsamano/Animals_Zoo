@@ -1,5 +1,3 @@
-require 'pry'
-
 class Zoo
   @@all = []
   attr_accessor :location, :name
@@ -13,9 +11,8 @@ class Zoo
     @@all
   end
 
-#class method. Returns an array of all zoos
   def self.find_by_location(wanted_location)
-    @@all.select do |zoo|
+    self.all.select do |zoo|
       zoo.location == wanted_location
     end
   end
